@@ -52,5 +52,3 @@ The challenge has three parts.
 - Please do your best to adhere to existing patterns and code style. Use two spaces as tabs. That said, we do not require linting and you will not be judged for missing semicolons and such.
 
 - Please commit your changes with git, and use clear, complete commit messages.
-
-- This is version 1.1 of this code challenge. If you have questions or have found a bug, please email rick@wingalpha.com.
