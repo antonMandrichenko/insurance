@@ -15,15 +15,16 @@ class SwitcherList extends Component {
   }
 
   fetchData() {
-    const { fetchSubs, userId } = this.props;
+    const { fetchSubs, userId, findAllSubs } = this.props;
     fetchSubs(userId);
+    findAllSubs();
   }
 
   render() {
-    const { active, subs, route } = this.props;
+    const { active, subs, route, allSubs } = this.props;
     if (!subs || subs.length === 0) { return null; }
-
-    return subs.map(sub => {
+    console.log("all", allSubs)
+    return subs.filter(item => allSubs && !allSubs.find(value => item.id === value.subscription)).map(sub => {
       if (isEqual(sub, active)) { return null; }
       return (
         <Link key={sub.id} className={styles.listItem} to={route(sub.id)}>

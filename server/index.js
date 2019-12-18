@@ -30,6 +30,9 @@ app.get('/api/devices/:sku', (req, res) => {
 });
 
 app.get('/api/insurance/contracts/', (req, res) => {
+  if(!req.query.subscription) {
+    res.send(data.allContracts);
+  }
   const sub = req.query.subscription;
   if (sub === '359') {
     res.send(data.allContracts);

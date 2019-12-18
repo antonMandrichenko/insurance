@@ -41,6 +41,8 @@ export const getCurrentAttPlan = (state, id) => fromAttSubs.getCurrentPlan(state
 export const getUpcomingAttPlan = (state, id) => fromAttSubs.getUpcomingPlan(state.attSubscriptions, id);
 export const getAttUpgradePurchase = (state, id) => fromAttSubs.getUpgradePurchase(state.attSubscriptions, id);
 
+export const getAllSubscriptions = (state) =>{console.log("reducer");return fromInsuranceContracts.getAll(state.insuranceContracts);} 
+
 export const getInfo = (state, key) => fromNotifications.getInfo(state.notifications, key);
 export const getError = (state, key) => fromNotifications.getError(state.notifications, key);
 

@@ -11,3 +11,7 @@ export const fetchFiltered = (params) => ({
   payload: { params },
 });
 
+export const findAll = () =>{console.log("action"); return {
+  type: types.FIND_ALL,
+}};
+

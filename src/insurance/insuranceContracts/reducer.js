@@ -13,3 +13,5 @@ export const getFiltered = (state, { subscription = null, attSubscription = null
 });
 export const get = (state, id) => state.resources[id];
 
+export const getAll = (state) => getResources(state);
+

@@ -1,14 +1,17 @@
 import { connect } from 'react-redux';
 import SwitcherList from './SwitcherList';
-import { getAllSprintSubscriptions } from 'reducers';
+import { getAllSprintSubscriptions, getAllSubscriptions } from 'reducers';
 import { fetchAll as fetchSubs } from 'subscriptions/sprint/actions';
+import { findAll as findAllSubs } from 'insurance/insuranceContracts/actions';
 
 const mapStateToProps = (state) => ({
-  subs: getAllSprintSubscriptions(state)
+  subs: getAllSprintSubscriptions(state),
+  allSubs: getAllSubscriptions(state)
 });
 
 const mapDispatchToProps = {
-  fetchSubs
+  fetchSubs,
+  findAllSubs
 }
 
 export default connect(
